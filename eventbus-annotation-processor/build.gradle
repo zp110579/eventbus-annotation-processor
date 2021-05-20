@@ -1,0 +1,28 @@
+apply plugin: 'java-library'
+
+dependencies {
+//    compile project(path:':loglibrary')
+    implementation 'de.greenrobot:java-common:2.3.1'
+    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+
+    implementation 'com.squareup:javapoet:1.7.0'
+    implementation 'com.google.auto:auto-common:0.6'
+
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'org.apache.commons:commons-collections4:4.1'
+//    implementation project(':eventbus:zee-annotation')
+
+//    compile 'com.google.auto.service:auto-service:1.0-rc2'
+//    compile 'com.squareup:javapoet:1.7.0'
+}
+
+
+//publish {
+//    userOrg = 'zp110570'
+//    groupId = 'com.zee'
+//    artifactId = 'eventbus-annotation-processor'
+//    publishVersion = '0.4.1'
+//    desc = 'new version'
+//    website = 'https://github.com/zp110580/ishowProject'//
+//}
+

@@ -1,0 +1,2 @@
+include ':eventbus-annotation-processor'
+include ':app'

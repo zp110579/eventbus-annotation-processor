@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+def buildSdkVersion = 26
+def buildToolVersion = "29.0.3"
+def supportVersion = "26.1.0"
+
+android {
+    compileSdkVersion buildSdkVersion
+    buildToolsVersion buildToolVersion
+    defaultConfig {
+        applicationId "com.zee.annotation"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 24
+        versionName "2.1.3"
+        flavorDimensions "default"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:' + supportVersion
+    implementation 'com.android.support:design:' + supportVersion
+    implementation 'com.android.support:recyclerview-v7:' + supportVersion
+    implementation 'com.android.support:cardview-v7:' + supportVersion
+}
