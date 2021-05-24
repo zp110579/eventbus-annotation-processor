@@ -19,6 +19,10 @@ import com.google.auto.service.AutoService;
 import com.zee.annotation.RunApplicationOnCreate;
 
 import org.apache.commons.collections4.MapUtils;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.SubscribeMainThread;
+import org.greenrobot.eventbus.SubscribeRunOnlyTop;
+import org.greenrobot.eventbus.SubscribeSimple;
 
 import com.zee.utils.Common;
 import com.zee.utils.Logger;
@@ -56,7 +60,8 @@ public class RunOnApplicationOnCreateProcessor extends AbstractProcessor {
 
     private boolean writerRoundDone;
 
-    private static final List<Class<? extends Annotation>> LISTENERS = Arrays.asList(
+
+    private static final List<Class<RunApplicationOnCreate>> LISTENERS = Arrays.asList(
             RunApplicationOnCreate.class
 
     );
